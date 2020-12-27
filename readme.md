@@ -1,18 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# devnote
 
-## Getting Started
+A beatifull web-based notes app for developers.
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- `git@github.com:muco-rolle/devnote.git`
+- `cd devnote`
+- `yarn install` install dependencies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run in development
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- `yarn dev` open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Run in production
+
+- `yarn build`
 
 ## Learn More
 
