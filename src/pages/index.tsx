@@ -1,3 +1,6 @@
-const HomePage = () => <h1>Devnote home page</h1>;
+import { HomeView } from '@views';
+import React from 'react';
+
+const HomePage = () => <HomeView />;
 
 export default HomePage;
