@@ -53,7 +53,12 @@ export const HomeView = () => {
                         size="lg"
                         bg="gray.700"
                         color="white"
-                        _hover={{ bg: 'gray.500' }}
+                        backgroundColor="gray.700"
+                        _hover={{ bg: 'gray.600' }}
+                        _active={{
+                            bg: 'gray.600',
+                            transform: 'scale(0.95)',
+                        }}
                         leftIcon={<AiOutlineGithub />}
                     >
                         Sign in with Github
