@@ -36,7 +36,7 @@ export const HomeView = () => {
                     fontSize={{ base: 'lg', lg: 'xl' }}
                     mt="6"
                 >
-                    A beautifull web-based notes app for developers.
+                    A beautiful web-based notes app for developers.
                 </Text>
 
                 <Stack
