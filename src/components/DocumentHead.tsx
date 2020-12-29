@@ -27,7 +27,7 @@ export const DocumentHead = ({ title }: DocumentHeadProps) => {
             />
             <meta name="theme-color" content="#3182ce" />
 
-            <title>devnote | {title || 'Home'}</title>
+            <title>Devnote | {title || 'Home'}</title>
         </NextHead>
     );
 };

@@ -13,7 +13,7 @@ export const HomeView = () => {
             m="0 auto"
         >
             <Box textAlign="center">
-                <Heading fontFamily="pacifico" mb={6}>
+                <Heading color="gray.700" fontFamily="pacifico" mb={6}>
                     devnote
                 </Heading>
                 <chakra.h1
@@ -36,8 +36,7 @@ export const HomeView = () => {
                     fontSize={{ base: 'lg', lg: 'xl' }}
                     mt="6"
                 >
-                    A beautifull web-based notes app for developers. Sign in
-                    with:
+                    A beautiful web-based notes app for developers.
                 </Text>
 
                 <Stack
@@ -52,9 +51,17 @@ export const HomeView = () => {
                         px="40px"
                         fontSize="1.2rem"
                         size="lg"
+                        bg="gray.700"
+                        color="white"
+                        backgroundColor="gray.700"
+                        _hover={{ bg: 'gray.600' }}
+                        _active={{
+                            bg: 'gray.600',
+                            transform: 'scale(0.95)',
+                        }}
                         leftIcon={<AiOutlineGithub />}
                     >
-                        Github
+                        Sign in with Github
                     </Button>
                     <Text>or</Text>
                     <Button
@@ -62,9 +69,11 @@ export const HomeView = () => {
                         h="4rem"
                         px="40px"
                         fontSize="1.2rem"
+                        variant="outline"
                         leftIcon={<FcGoogle />}
+                        _active={{ transform: 'scale(0.95)' }}
                     >
-                        Google
+                        Sign in with Google
                     </Button>
                 </Stack>
             </Box>

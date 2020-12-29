@@ -1,11 +1,12 @@
+import React from 'react';
 import { Box, Heading } from '@chakra-ui/react';
 import { AppLayout } from '@layouts';
 
 export const AppView = () => {
     return (
-        <AppLayout title="App">
+        <AppLayout>
             <Box>
-                <Heading>App View</Heading>
+                <Heading>App view</Heading>
             </Box>
         </AppLayout>
     );

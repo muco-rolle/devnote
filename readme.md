@@ -1,6 +1,6 @@
 # devnote
 
-A beatifull web-based notes app for developers.
+A beatiful web-based notes app for developers.
 
 ### Installation
 
