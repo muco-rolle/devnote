@@ -5,6 +5,47 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { chakra, PropsOf, useColorModeValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
+import { tools } from '@config';
+
+export const Sidebar = () => {
+    return (
+        <Box
+            as="aside"
+            bg="white"
+            pos="fixed"
+            top="70px"
+            left="0"
+            w="280px"
+            overflowY="auto"
+            boxShadow="1px 0 15px rgba(0,0,0,.04),1px 0 6px rgba(0,0,0,.04)"
+            height="calc(100vh - 70px)"
+            zIndex="0"
+            display={{ base: 'none', md: 'block' }}
+        >
+            <PerfectScrollbar>
+                <Stack spacing={6} p={5}>
+                    <Box>
+                        {tools.map(({ icon, title, path }, index) => {
+                            return (
+                                <Box
+                                    as="li"
+                                    key={title}
+                                    display="flex"
+                                    alignItems="center"
+                                >
+                                    <SidebarLink key={path} href={path}>
+                                        <Icon mr={2} as={icon} />
+                                        <Box>{title}</Box>
+                                    </SidebarLink>
+                                </Box>
+                            );
+                        })}
+                    </Box>
+                </Stack>
+            </PerfectScrollbar>
+        </Box>
+    );
+};
 
 const StyledLink = React.forwardRef(function StyledLink(
     props: PropsOf<typeof chakra.a> & { isActive?: boolean },
@@ -22,17 +63,18 @@ const StyledLink = React.forwardRef(function StyledLink(
             py="1"
             ref={ref}
             fontSize="sm"
-            fontWeight="500"
+            fontWeight="bold"
             color={useColorModeValue('gray.700', 'whiteAlpha.900')}
             transition="all 0.2s"
+            borderRadius={6}
             _hover={{
-                bg: 'brand.50',
-                color: 'brand.500',
+                bg: 'blue.100',
+                color: 'blue.900',
                 fontWeight: '600',
             }}
             _activeLink={{
-                bg: 'brand.50',
-                color: 'brand.500',
+                bg: 'blue.100',
+                color: 'blue.900',
                 fontWeight: '600',
             }}
             {...rest}
@@ -64,29 +106,5 @@ const SidebarLink = (props: SidebarLinkProps) => {
                 <StyledLink isActive={isActive}>{children}</StyledLink>
             </NextLink>
         </chakra.div>
-    );
-};
-
-export const Sidebar = () => {
-    return (
-        <Box
-            as="aside"
-            bg="white"
-            pos="fixed"
-            top="70px"
-            left="0"
-            w="280px"
-            overflowY="auto"
-            boxShadow="1px 0 15px rgba(0,0,0,.04),1px 0 6px rgba(0,0,0,.04)"
-            height="calc(100vh - 70px)"
-            zIndex="0"
-            display={{ base: 'none', md: 'block' }}
-        >
-            <PerfectScrollbar>
-                <Stack spacing={6} p={5}>
-                    Sidebar
-                </Stack>
-            </PerfectScrollbar>
-        </Box>
     );
 };

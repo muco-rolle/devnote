@@ -1,6 +1,7 @@
 import React from 'react';
 import { Avatar, Box, Flex, HStack, IconButton } from '@chakra-ui/react';
 import { BellIcon, ChevronDownIcon, Icon, MoonIcon } from '@chakra-ui/icons';
+import { Logo } from '@components';
 
 export const Header = () => {
     return (
@@ -17,7 +18,7 @@ export const Header = () => {
             width="100%"
             zIndex="10"
         >
-            <Box>Logo</Box>
+            <Logo />
             {/* Search */}
             <Flex>
                 <HStack spacing={5}>
