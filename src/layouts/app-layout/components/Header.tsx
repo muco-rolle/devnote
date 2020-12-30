@@ -11,7 +11,7 @@ export const Header = () => {
             padding={9}
             as="header"
             height="70px"
-            boxShadow="sm"
+            boxShadow="0 1px 15px rgba(0,0,0,.04),0 1px 6px rgba(0,0,0,.04)"
             bg="white"
             position="fixed"
             width="100%"

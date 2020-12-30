@@ -77,7 +77,7 @@ export const Sidebar = () => {
             left="0"
             w="280px"
             overflowY="auto"
-            boxShadow="base"
+            boxShadow="1px 0 15px rgba(0,0,0,.04),1px 0 6px rgba(0,0,0,.04)"
             height="calc(100vh - 70px)"
             zIndex="0"
             display={{ base: 'none', md: 'block' }}
