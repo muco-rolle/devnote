@@ -1,4 +1,14 @@
-import { Box, Button, chakra, Heading, Stack, Text } from '@chakra-ui/react';
+import {
+    Alert,
+    AlertIcon,
+    Box,
+    Button,
+    chakra,
+    Heading,
+    Stack,
+    Text,
+} from '@chakra-ui/react';
+import React from 'react';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 
@@ -13,7 +23,7 @@ export const HomeView = () => {
             m="0 auto"
         >
             <Box textAlign="center">
-                <Heading color="gray.700" fontFamily="pacifico" mb={6}>
+                <Heading color="blue.600" fontFamily="pacifico" mb={6}>
                     devnote
                 </Heading>
                 <chakra.h1
@@ -39,7 +49,20 @@ export const HomeView = () => {
                     A beautiful web-based notes app for developers.
                 </Text>
 
-                <Stack
+                <Box width="700px" maxW="90%" m="0 auto" mt={8}>
+                    <Alert status="warning">
+                        <AlertIcon />
+                        Devnote is in development. Your notes will be saved to
+                        local storage and not persisted in any database or
+                        cloud.
+                    </Alert>
+
+                    <Button variant="solid" colorScheme="blue" size="lg" mt={8}>
+                        Use the early version
+                    </Button>
+                </Box>
+
+                {/* <Stack
                     mt="10"
                     spacing="4"
                     justify="center"
@@ -75,7 +98,7 @@ export const HomeView = () => {
                     >
                         Sign in with Google
                     </Button>
-                </Stack>
+                </Stack> */}
             </Box>
         </Box>
     );
