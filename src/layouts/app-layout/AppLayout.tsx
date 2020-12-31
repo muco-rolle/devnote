@@ -11,7 +11,7 @@ export const AppLayout = ({ children, title }: AppLayoutProps) => {
     return (
         <Fragment>
             <DocumentHead title={title} />
-            <Box bg="gray.50">
+            <Box>
                 <Header />
                 <Box as="main" overflow="hidden" mx={5}>
                     <Sidebar />

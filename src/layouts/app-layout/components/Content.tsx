@@ -13,7 +13,7 @@ export const Content = ({ children }: ContentProps) => {
             minH="100vh"
             ml={{ base: '0', md: '280px' }}
         >
-            <Box>
+            <Box width="800px" margin="0 auto" maxW="100%">
                 <PageTransition>{children}</PageTransition>
             </Box>
         </Box>
